@@ -188,7 +188,7 @@ class Boss(commands.GroupCog):
         if not self.attack:
             if int(self.bossHP) <= 0:
                 await interaction.response.send_message(
-                    f"{self.currentvalue}There is 0 HP remaining on the boss, the boss has been defeated!",
+                    f"{self.currentvalue}👑 ᴛʜɪꜱ ᴘʟᴀʏᴇʀ ꜱᴛᴏᴏᴅ ᴛᴀʟʟ ᴀɢᴀɪɴꜱᴛ ᴏᴅᴅꜱ ᴀɴᴅ ᴄʟᴀɪᴍᴇᴅ ᴠɪᴄᴛᴏʀʏ ꜰʀᴏᴍ ᴀ ᴍɪɢʜᴛʏ ʙᴏꜱꜱ, ᴡʀɪᴛɪɴɢ ᴛʜᴇɪʀ ɴᴀᴍᴇ ɪɴ ʟᴇɢᴇɴᴅꜱ. 👑!",
                 )
             else:
                 await interaction.response.send_message(
@@ -202,7 +202,7 @@ class Boss(commands.GroupCog):
                     self.users.remove(user)
             if len(self.users) == 0:
                 await interaction.response.send_message(
-                    f"The boss has dealt {self.bossattack} damage!\n{self.currentvalue}The boss has won!",
+                    f"The boss has dealt {self.bossattack} damage!\n{self.currentvalue}💀 ᴛʜᴇ ʙᴏꜱꜱ ᴘʀᴏᴠᴇᴅ ᴜɴꜱᴛᴏᴘᴘᴀʙʟᴇ, ᴄʀᴜꜱʜɪɴɢ ᴀʟʟ ᴡʜᴏ ᴅᴀʀᴇᴅ ᴛᴏ ꜰᴀᴄᴇ ɪᴛ ᴀɴᴅ ꜱᴇᴄᴜʀɪɴɢ ɪᴛꜱ ꜰɪᴇʀᴄᴇ ᴅᴏᴍɪɴɪᴏɴ. 💀!",
                 )
             else:
                 await interaction.response.send_message(
