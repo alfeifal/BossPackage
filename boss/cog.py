@@ -381,24 +381,24 @@ class Boss(commands.GroupCog):
         else:
             ballhealth = ball.health
         messageforuser = f"{ball.description(short=True, include_emoji=True, bot=self.bot)} has been selected for this round, with {ballattack} ATK and {ballhealth} HP"
-       if "✨" in messageforuser:
-    messageforuser = f"{ball.description(short=True, include_emoji=True, bot=self.bot)} has been selected for this round, with {ballattack}+{SHINYBUFFS[0]} ATK and {ballhealth}+{SHINYBUFFS[1]} HP"
-    ballhealth += SHINYBUFFS[1]
-    ballattack += SHINYBUFFS[0]
-elif "❄️" in messageforuser:
-    messageforuser = f"{ball.description(short=True, include_emoji=True, bot=self.bot)} has been selected for this round, with {ballattack}+{CHRISTMASBUFFS[0]} ATK and {ballhealth}+{CHRISTMASBUFFS[1]} HP"
-    ballhealth += CHRISTMASBUFFS[1]
-    ballattack += CHRISTMASBUFFS[0]
-elif "💫" in messageforuser:
-    messageforuser = f"{ball.description(short=True, include_emoji=True, bot=self.bot)} has been selected for this round, with {ballattack}+{MYTHICBUFFS[0]} ATK and {ballhealth}+{MYTHICBUFFS[1]} HP"
-    ballhealth += MYTHICBUFFS[1]
-    ballattack += MYTHICBUFFS[0]
-elif "⚔️" in messageforuser:
-    messageforuser = f"{ball.description(short=True, include_emoji=True, bot=self.bot)} has been selected for this round, with {ballattack}+{BOSSBUFFS[0]} ATK and {ballhealth}+{BOSSBUFFS[1]} HP"
-    ballhealth += BOSSBUFFS[1]
-    ballattack += BOSSBUFFS[0]
-else:
-    pass
+        if "✨" in messageforuser:
+            messageforuser = f"{ball.description(short=True, include_emoji=True, bot=self.bot)} has been selected for this round, with {ballattack}+{SHINYBUFFS[0]} ATK and {ballhealth}+{SHINYBUFFS[1]} HP"
+            ballhealth += SHINYBUFFS[1]
+            ballattack += SHINYBUFFS[0]
+        elif "❄️" in messageforuser:
+            messageforuser = f"{ball.description(short=True, include_emoji=True, bot=self.bot)} has been selected for this round, with {ballattack}+{CHRISTMASBUFFS[0]} ATK and {ballhealth}+{CHRISTMASBUFFS[1]} HP"
+            ballhealth += CHRISTMASBUFFS[1]
+            ballattack += CHRISTMASBUFFS[0]
+        elif "💫" in messageforuser:
+            messageforuser = f"{ball.description(short=True, include_emoji=True, bot=self.bot)} has been selected for this round, with {ballattack}+{MYTHICBUFFS[0]} ATK and {ballhealth}+{MYTHICBUFFS[1]} HP"
+            ballhealth += MYTHICBUFFS[1]
+            ballattack += MYTHICBUFFS[0]
+        elif "⚔️" in messageforuser:
+            messageforuser = f"{ball.description(short=True, include_emoji=True, bot=self.bot)} has been selected for this round, with {ballattack}+{BOSSBUFFS[0]} ATK and {ballhealth}+{BOSSBUFFS[1]} HP"
+            ballhealth += BOSSBUFFS[1]
+            ballattack += BOSSBUFFS[0]
+        else:
+            pass
 
 
         if not self.attack:
@@ -643,4 +643,3 @@ else:
             f"{user} has joined the `{self.bossball}` Boss Battle. [hackjoin by {await self.bot.fetch_user(int(interaction.user.id))}]",
             self.bot,
         )
-
