@@ -4,7 +4,7 @@ version = "0.0.1"
 authors = [
   { name="Mo Official", email="muminhassouna123@gmail.com" },
 ]
-description = "Boss package for Ballsdex"
+description = "Boss package for Ballsdex, this is an updated version with specials buffs"
 requires-python = ">=3.12"
 classifiers = [
     "Programming Language :: Python :: 3",
