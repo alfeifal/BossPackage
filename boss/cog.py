@@ -66,11 +66,11 @@ from ballsdex.core.models import (
 # 7. /boss admin conclude ends the boss battle and rewards the winner, but you can choose to have *no* winner (ADMIN ONLY)
 
 SHINYBUFFS = [2000,2000] # Shiny Buffs
-CHRISTMASBUFFS = [500,500] # Christmas Buffs
-MYTHICBUFFS = [3000,3000] # Mythic Buffs
-BOSSBUFFS = [4000,4000] # Boss Buffs
+CHRISTMASBUFFS = [500,500] # Shiny Buffs
+MYTHICBUFFS = [3000,3000] # Shiny Buffs
+BOSSBUFFS = [4000,4000] # Shiny Buffs
 # ATK, HP
-MAXSTATS = [150000,150000] # Max stats a card is limited to (before buffs)
+MAXSTATS = [10000,10000] # Max stats a card is limited to (before buffs)
 # ATK, HP
 DAMAGERNG = [5000,8000] # Damage a boss can deal IF attack_amount has NOT been inputted in /boss admin attack.
 # Min Damage, Max Damage
@@ -643,3 +643,6 @@ class Boss(commands.GroupCog):
             f"{user} has joined the `{self.bossball}` Boss Battle. [hackjoin by {await self.bot.fetch_user(int(interaction.user.id))}]",
             self.bot,
         )
+
+cog.py
+31 KB
